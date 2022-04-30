@@ -1,0 +1,252 @@
+.background {
+    background: url("../img/total_background.jpg");
+    min-height: 300vh;
+    max-width 200vh;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    overflow: hidden;
+}
+
+.open_background {
+    background: url("../img/total_background.jpg");
+    min-height: 300vh;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+}
+
+.main_content {
+    margin-left: 16vh;
+}
+
+.header_panel {
+    min-width: 200vh;
+    min-height: 10vh;
+}
+
+.header_panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.logo nav img{
+    background-size: cover;
+    -webkit-background-size: cover;
+    display: block;
+    margin: 0vh 18vh 0vh 23.5vh;
+}
+
+.basket_button {
+    margin-left: 17.5vh;
+    max-width: 118.5vh;
+}
+.basket_button .btn{
+    min-width: 13vh;
+    min-height: 13vh;
+}
+
+.event_carousel {
+    max-width: 118.5vh;
+}
+
+.event_carousel .carousel {
+    border-radius: 30px 30px 0px 0px;
+    background-color: #F6F7FB;
+    margin-top: 7vh;
+}
+
+.event_carousel .hello_information {
+    text-align: center;
+}
+
+.verification_buttons {
+    background-color: #F6F7FB;
+    padding-bottom: 6vh;
+    border: 4px solid #E6E6E6;
+    border-radius: 0px 0px 70px 70px;
+
+}
+
+.verification_buttons input {
+    min-width: 16vh;
+    min-height: 4vh;
+
+}
+
+.sorting_instruments {
+    background-color: #F6F7FB;
+    border-radius: 5px 5px 30px 30px;
+    margin-top: 2vh;
+    width: 118.5vh;
+    padding: 0vh -0.5vh;
+}
+
+.sorting_instruments .total_sorting_buttons {
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+}
+
+.sorting_instruments .total_sorting_buttons div {
+    margin: 0vh 0.5vh;
+}
+
+.sorting_instruments .variable_sorting_buttons {
+    margin-top: 1vh;
+    padding-bottom: 0.5vh;
+    display: flex;
+    justify-content: center;
+}
+.sorting_instruments .dividing_line {
+    min-width: 118.5vh;
+    max-width: 118.5vh;
+}
+.help_container {
+    background-color: #252525;
+    width: auto;
+    height: 40vh;
+}
+
+.games_content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 180vmin;
+    margin-top: 1vh;
+    margin-left: 0.125vh;
+    padding: -0.5vh -0.5vh;
+}
+
+.games_content a {
+    text-decoration: none !important;
+}
+
+.games_content .game_panel {
+    display: inline-block;
+    background: #F6F7FB;
+    border: 5px solid #E6E6E6;
+    border-radius: 10px;
+    margin-right: 0.5vh;
+    margin-top: 0.5vh;
+
+}
+
+.game_icon {
+    width: 38vh;
+    height: 55vh;
+}
+
+.game_description h5, .mini_description h5 {
+    color: black;
+}
+
+.mini_description {
+    max-width: 37vh;
+}
+.game_content .game_panel {
+    display: inline-block;
+    max-width: 77.5vh;
+    background: #ECF0F1;
+    border: 3px solid #9B9B9B;
+    border-radius: 10px;
+    margin: 0vh 0.5vh;
+}
+.game_content {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 120vmin;
+    margin-top: 5vh;
+    padding: 0vh -0.5vh;
+}
+
+.game_links_content {
+    padding: -0.5vh 0vh;
+}
+.game_link_panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #FFFFFF;
+    align-self: center;
+    border: 3px solid #F0F0F0;
+    margin: 0.5vh 0vh;
+}
+
+.game_link_panel h5 {
+    align-self: center;
+    margin-left: 36vh;
+}
+
+.game_link_panel .open_game_button {
+    align-self: center;
+    margin-left: 2vh;
+}
+
+.game_group_desc_price_basket .basket_button button{
+    margin-top: 5vh;
+    float: right;
+    width: 25vh;
+    height: 10vh;
+}
+
+.basket_information, .total_amount {
+    background-color: #F6F7FB;
+    max-width: 118.5vh;
+    margin-top: 2vh;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.support {
+    padding-top: 3vh;
+    margin-left: 10vh;
+}
+
+.support .dividing_line {
+    max-width: 60vh;
+}
+
+.additional_help {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #F6F7FB;
+    border-radius: 10px;
+    max-width: 40vh;
+    margin-top: 1vh;
+}
+
+.additional_help .dividing_line {
+    max-width: 100%;
+    width: auto;
+}
+
+.final_description {
+    display: flex;
+    justify-content: center;
+    background-color: #F6F7FB;
+    margin-top: 16vh;
+}
+
+.pagination_el {
+    display: table;
+    background-color: #F6F7FB;
+    border: 10px solid #F6F7FB;
+    border-left: 20px solid #F6F7FB;
+    border-right: 20px solid #F6F7FB;
+    border-radius: 10px;
+    margin-left: 35%;
+    margin-right: 65%;
+    margin-top: 2vh;
+    padding-top: 2vh;
+    margin-bottom: 0.5vh;
+}
+
+.reg_login {
+    max-width: 118.5vh;
+}
+.reg_login_inf {
+    background-color: #F6F7FB;
+    text-align: center;
+}

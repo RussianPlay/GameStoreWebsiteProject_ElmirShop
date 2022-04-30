@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" class="login-form" method="post">
+    {{ user_form.hidden_tag() }}
+
+    <p>
+        <div class="reg_login">
+            <div class="reg_login_inf">{{ user_form.username.label }}<br></div>
+            {{ user_form.username(class="form-control") }}<br>
+        </div>
+        {% for error in user_form.username.errors %}
+            <div class="alert alert-danger">
+                {{ error }}
+            </div>
+        {% endfor %}
+    </p>
+
+    <p>
+        <div class="reg_login">
+            <div class="reg_login_inf">{{ user_form.email.label }}</div>
+            {{ user_form.email(class="form-control") }}<br>
+        </div>
+        {% for error in user_form.email.errors %}
+            <div class="alert alert-danger">
+                {{ error }}
+            </div>
+        {% endfor %}
+    </p>
+
+    <p>
+        <div class="reg_login">
+            <div class="reg_login_inf">{{ user_form.password.label }}</div>
+            {{ user_form.password(class="form-control", type="password") }}<br>
+        </div>
+        {% for error in user_form.password.errors %}
+            <div class="alert alert-danger">
+                {{ error }}
+            </div>
+        {% endfor %}
+    </p>
+
+    <p>
+        <div class="reg_login">
+            <div class="reg_login_inf">{{ user_form.password_again.label }}</div>
+            {{ user_form.password_again(class="form-control", type="password") }}<br>
+        </div>
+        {% for error in user_form.password_again.errors %}
+            <div class="alert alert-danger">
+                {{ error }}
+            </div>
+        {% endfor %}
+    </p>
+
+    <p>{{ user_form.submit(type="submit", class="btn btn-primary") }}</p>
+</form>
+{% endblock %}

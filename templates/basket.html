@@ -1,0 +1,70 @@
+{% extends "game_base.html" %}
+
+{% block content %}
+    <h1 class="basket_information">Ваша корзина:</h1>
+    <div class="games_content">
+        {% if games_data[0] and games_data[1] %}
+            {% for game_item in games_data[0] %}
+                <div class="game_item_content">
+                    <div class="game_panel">
+                        <img src="{{ url_for('static', filename=game_item[4]) }}" class="game_icon">
+                        <div class="game_description">
+                            <h5>{{ game_item[1] }}</h5>
+                            {% for discount_price in games_data[1] %}
+                                {% if game_item[0] == discount_price['id'] %}
+                                    <h5>Цена: {{ discount_price['mn_price'] }} &#8381;</h5>
+                                {% endif %}
+                            {% endfor %}
+                            <h5>Количество: {{ game_item[9] }} </h5>
+                            <div class="quantity_change_group">
+                                <form action="" method="post">
+                                    <button value="add_one_el {{ game_item[0] }}" name="activity">+</button>
+                                    <button value="del_one_el {{ game_item[0] }}" name="activity">-</button>
+                                </form>
+                            </div>
+                            <a href="/game/{{ game_item[0] }}">
+                                <button>Перейти к игре</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <h1 class="total_amount">&#x1F5A9; Стоимость всех игр: {{ total_amount }} &#8381;</h1>
+    <div class="pagination_el">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                {% if page - 1 > 0 %}
+                    <li class="page-item"><a class="page-link" href="/basket/{{ page - 1 }}">&#129152;</a></li>
+                {% else %}
+                    <li class="page-item"><a class="page-link" href="/basket/{{ page }}">&#129152;</a></li>
+                {% endif %}
+
+                <li class="page-item"><a class="page-link" href="/basket">1</a></li>
+
+                {% if 1 * GAME_CARDS_NUMBER_PER_PAGE <= games_data[0]|length %}
+                    <li class="page-item"><a class="page-link" href="/basket/2">2</a></li>
+                {% else %}
+                    <li class="page-item"><a class="page-link" href="/basket">2</a></li>
+                {% endif %}
+
+                {% if 2 * GAME_CARDS_NUMBER_PER_PAGE <= games_data[0]|length %}
+                    <li class="page-item"><a class="page-link" href="/basket/3">3</a></li>
+                {% else %}
+                    {% if 1 * GAME_CARDS_NUMBER_PER_PAGE <= games_data[0]|length %}
+                        <li class="page-item"><a class="page-link" href="/basket/2">3</a></li>
+                    {% else %}
+                        <li class="page-item"><a class="page-link" href="/basket">3</a></li>
+                    {% endif %}
+                {% endif %}
+
+                {% if page * GAME_CARDS_NUMBER_PER_PAGE <= games_data[0]|length %}
+                    <li class="page-item"><a class="page-link" href="/basket/{{ page + 1}}">&#129154;</a></li>
+                {% else %}
+                    <li class="page-item"><a class="page-link" href="/basket/{{ page }}">&#129154;</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+{% endblock %}
